@@ -46,3 +46,62 @@ main {
     color: #666;
     font-size: 1.1em;
 }
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-link {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* ======= MEDIA QUERIES ======= */
+
+/* Mobile-first approach: default is mobile */
+
+/* Tablets and small desktops */
+@media (min-width: 768px) {
+    main {
+        padding: 40px;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    .project {
+        padding: 30px;
+        font-size: 1.1em;
+    }
+
+    .project h2 {
+        font-size: 1.75em;
+    }
+
+    .project p {
+        font-size: 1.15em;
+    }
+}
+
+/* Large desktops */
+@media (min-width: 1200px) {
+    body {
+        font-size: 18px;
+    }
+
+    .project {
+        padding: 40px;
+    }
+
+    .projects-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .projects-link {
+        grid-column: span 2;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
