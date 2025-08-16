@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapterPages</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href=/>Home</a></li>
+            <li><a href=/chapter>chapters</a></li>
+        </ul>
+    </nav>
+
+    <h1><%= chapterTitle %></h1>
+
+    <div id="imageContainer">
+        
+        <% chapterImages.forEach(function(publicId) { %>
+            <div class="individualImage">
+                <!-- Build Cloudinary image URL -->
+                <img src="https://res.cloudinary.com/dml8exmwk/image/upload/<%= publicId %>.jpg" alt="Chapter Page">
+            </div>
+        <% }); %>
+
+
+    </div>
+
+</body>
+</html>
